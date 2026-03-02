@@ -10,7 +10,7 @@
 ## Comandos
 ### Clássicos
 `git status`: Verifica as mudanças feitas.
-`git add .` / `git add <nome-do-arquivo>`: Colocam as mudanças na *staging area (área de preparação)*, esses arquivos estão preparados para a próxima etapa.
+`git add .` | `git add <nome-do-arquivo>`: Colocam as mudanças na *staging area (área de preparação)*, esses arquivos estão preparados para a próxima etapa.
     - `git add .`: Adiciona todas as mudanças na pasta atual;
     - `git add nome_do_arquivo.txt`: Adiciona apenas este arquivo.
 `git commit -m "Seu comentário"`: Cria um *snapshot (fotográfia)* do projeto no histórico, salva o que está no *staging (feito no add)* com uma mensagem descritiva.
