@@ -1,0 +1,44 @@
+nome: "Luiz"
+# numericos
+idade: 26
+peso: 72.35
+
+# string
+texto: texto valido
+texto_tambem_valido: "este tambem e um texto valido"  # Talvez não aceite aspas
+objeto:  # isso é um dicionario
+  # numericos
+  versao: 2
+  versao_completa: 3.14
+  arquivo: "teste.txt"
+
+# nulos
+nulo: ~
+nulo_tambem: null
+
+# booleanos
+verdadeiro: True
+verdadeiro_tambem: On
+
+falso: False
+falso_tambem: Off
+
+# Listas
+lista: [1, 2, 3, 4, 5]
+lista_mais_usada: 
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5 
+
+# Dicionarios
+obj: {a: 1, b: 2, c: 3, obj_interno: {xx: 1, yy: 2, zz: 3}}
+obj_tambem: 
+  a: 1
+  b: 2
+  c: 3
+  obj_interno:
+    xx: 1
+    yy: 2
+    zz: 3
