@@ -21,7 +21,7 @@
     - `EXPOSE:` porta da aplicação
     - `COPY:` quais arquivos precisam ser copiados
 - Veja um exemplo de criaçãod e imagem em Node.sj:  
-```
+```dockerfile
 FROM node
 
 WORKDIR /app

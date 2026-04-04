@@ -1,0 +1,4 @@
+Aqui eu irei fazer uma API com fast api, sqlite e next.js
+[Frontend (Next.js)]
+[FastAPI (container)]
+[SQLite (volume Docker)]

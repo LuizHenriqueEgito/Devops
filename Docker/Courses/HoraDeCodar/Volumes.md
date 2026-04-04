@@ -14,7 +14,7 @@
 - Quando o container for removido, perderemos estes arquivos
 - Por isso precisamos de **volumes**
 - Exemplo prático:
-``` 
+``` dockerfile
 FROM php:8-apache
 
 WORKDIR /var/www/html
@@ -66,7 +66,7 @@ docker run <container> -v diretorio_do_build:/data_container
 # Criando volumes manualmente
 - Use o comando: `docker volume create <nome>`
 - Desta maneira temos um named volume podemos atrelar a algum container na sua execução:
-``` 
+```bash
 ocker run <container> -v volume_criado_manualmente:/data_container
 ```
 
