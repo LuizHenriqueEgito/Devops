@@ -14,13 +14,13 @@ class Handler(BaseHTTPRequestHandler):
             case _:
                 print('Invalid Option.')
 
-        print(f"[SERVIDOR] Respondendo com: {resultado}")
+        print(f"[SERVIDOR] Respondendo com: {result}")
 
         self.send_response(200)
         self.send_header("Content-type", "text/plain")
         self.end_headers()
 
-        self.wfile.write(str(resultado).encode())
+        self.wfile.write(str(result).encode())
 
 def run():
     server = HTTPServer(("0.0.0.0", 8000), Handler)
