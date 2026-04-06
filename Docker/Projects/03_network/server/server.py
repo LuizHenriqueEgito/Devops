@@ -1,16 +1,18 @@
-from http.server import BaseHTTPRequestHandler, HTTPServer
 import random
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
 
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         print(f"[SERVIDOR] Recebeu requisição: {self.path}")
         print(f"[SERVIDOR] {self.client_address} -> {self.path}")
-        if self.path == "/moeda":
-            resultado = random.choice(["Cara", "Coroa"])
-        elif self.path == "/dado":
-            resultado = random.randint(1, 6)
-        else:
-            resultado = "Rota inválida"
+        match self.path:
+            case '/moeda':
+                result = random.choice(["Cara", "Coroa"])
+            case '/dado':
+                result = random.randint(1, 6)
+            case _:
+                print('Invalid Option.')
 
         print(f"[SERVIDOR] Respondendo com: {resultado}")
 

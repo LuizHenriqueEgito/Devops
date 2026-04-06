@@ -1,5 +1,6 @@
 import urllib.request
 
+
 def main():
     while True:
         escolha = input("Digite 'moeda' ou 'dado': ").strip().lower()
