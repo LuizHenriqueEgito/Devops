@@ -47,11 +47,38 @@
 - `git rebase -i HEAD~3`: Permite editar commits antigos. Você pode: Juntar commits (squash), alterar mensagens, remover commits, reorganizar commits. Usdo para limpar histórico antes de um PR.
 <div style="border:1px solid #FF4500; padding:12px; border-radius:6px; background:#fff5f0">
 <span style="color:#FF4500">HEAD:</span>
-É o ponteiro de onde você está no seu repositório. Ele aponta para o nome da sua branch atual (como a `main` ou `develop`), e essa branch aponta para o commit mais recente.
-- HEAD: O commit atual (o topo)
-- ~1: Significa "voltar para um nível na árvore genealógica"
-Assim HEAD~1 é o commit imediatamente anterior ao qe você está agora (o "pai" do commit atual)
+É o ponteiro de onde você está no seu repositório. Ele aponta para o nome da sua branch atual (como a <code>main</code> ou <code>develop</code>), e essa branch aponta para o commit mais recente.
+
+<ul>
+  <li><strong>HEAD:</strong> O commit atual (o topo)</li>
+  <li><strong>~1:</strong> Significa "voltar para um nível na árvore genealógica"</li>
+</ul>
+
+Assim <code>HEAD~1</code> é o commit imediatamente anterior ao que você está agora (o "pai" do commit atual)
 </div>
+
+### `.gitignore`
+Como fazemos para ignorar arquivos, ou seja o git não irá "olhar"/versionar esses arquivos.
+```gitignore
+arquivo.txt  # ignora esse arquivo
+*.log  # ignora a extensão (irá ignorar tudo que for .log)
+folder/  # ignora a pasta inteira
+**/__pycache__/  # ignora a pasta __pycache__ onde quer que ela esteja
+**/*.csv  # ignora arquivos csv onde quer que eles estejam
+**/arquivo.txt  # ignora arquivo.txt onde quer que eles estejam
+# exemplo que ignora tudo menos um caso
+*.csv
+!tb_importante.csv  # não ignora esse arquivo
+
+# casos mais usados
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.env
+.venv/
+```
+Perceba que sem o `**` ignora apenas na raiz.
 
 ---
 ## Dúvidas
