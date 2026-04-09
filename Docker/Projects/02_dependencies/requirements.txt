@@ -1,0 +1,2 @@
+# últiuma versão
+rich==14.3.3
