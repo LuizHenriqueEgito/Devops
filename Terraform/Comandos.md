@@ -181,4 +181,22 @@ locals {
 ## `jsondecode`
 ```hcl
 # jsondecode: transforma uma string em um map
+locals {
+  obj = jsondecode("{\"name\":\"luiz\"}")
+}
+```
+
+## `$`
+```hcl
+# $: interpola strings
+variable "ambiente" {
+  default = "producao"
+}
+
+resource "aws_instance" "web" {
+  # O nome da instância será "servidor-web-producao"
+  tags = {
+    Name = "servidor-web-${var.ambiente}"
+  }
+}
 ```
