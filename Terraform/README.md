@@ -17,3 +17,6 @@ Ela possui controles de fluxo limitados como `for` e `if`.
 1. Escreva os arquivos `.tf` com a configuração que desejar;
 2. O terraform vai analisar o código no `plan`, comparar o estuda atual e as modificações e mostrar um plano de execução: o que será criado, alterado ou destruído.
 3. Aplica `apply` o plano da etapa anterior.
+
+# Sistema de Arquivos
+- [ ] TODO: mostre como funcionam os sistemas de arquivos
